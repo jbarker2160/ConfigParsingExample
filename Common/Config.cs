@@ -137,7 +137,18 @@ namespace ConfigParsingExample.Common
 
             if (!_isInitialized)
             {
-                InitializeConfig();
+                try
+                {
+                    InitializeConfig();
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex.Message);
+                    Console.WriteLine(ex.Message);
+
+                    throw;
+                }
+                
             }
         }
 
@@ -146,7 +157,7 @@ namespace ConfigParsingExample.Common
             string[] _configFileLines = File.ReadAllLines(@"example.config");
             foreach (string line in _configFileLines)
             {
-                switch (line[0].ToString())
+                switch (line.Trim()[0].ToString())
                 {
                     case "#":
                         _logger.LogInformation($"Config Comment Read: {line}");
