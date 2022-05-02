@@ -144,7 +144,6 @@ namespace ConfigParsingExample.Common
                 catch (Exception ex)
                 {
                     _logger.LogError(ex.Message);
-                    Console.WriteLine(ex.Message);
 
                     throw;
                 }
@@ -161,7 +160,6 @@ namespace ConfigParsingExample.Common
                 {
                     case "#":
                         _logger.LogInformation($"Config Comment Read: {line}");
-                        Console.WriteLine($"Config Comment Read: {line}");
                         break;
 
                     default:
@@ -172,7 +170,6 @@ namespace ConfigParsingExample.Common
                         {
                             case "host":
                                 _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
                                 _host = value;
 
                                 break;
@@ -181,7 +178,6 @@ namespace ConfigParsingExample.Common
                                 if (int.TryParse(value, out _serverId))
                                 {
                                     _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                    Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
                                 }
                                 else
                                 {
@@ -194,7 +190,6 @@ namespace ConfigParsingExample.Common
                                 if (float.TryParse(value, out _serverLoadAlarm))
                                 {
                                     _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                    Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
                                 }
                                 else
                                 {
@@ -205,7 +200,6 @@ namespace ConfigParsingExample.Common
 
                             case "user":
                                 _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
                                 _user = value;
 
                                 break;
@@ -214,7 +208,6 @@ namespace ConfigParsingExample.Common
                                 if (bool.TryParse(value, out _verbose))
                                 {
                                     _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                    Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
                                 }
                                 else
                                 {
@@ -224,7 +217,6 @@ namespace ConfigParsingExample.Common
                                             _verbose = true;
 
                                             _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                            Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
 
                                             break;
 
@@ -232,7 +224,6 @@ namespace ConfigParsingExample.Common
                                             _verbose = true;
 
                                             _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                            Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
 
                                             break;
 
@@ -240,7 +231,6 @@ namespace ConfigParsingExample.Common
                                             _verbose = false;
 
                                             _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                            Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
 
                                             break;
 
@@ -248,7 +238,6 @@ namespace ConfigParsingExample.Common
                                             _verbose = false;
 
                                             _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                            Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
 
                                             break;
 
@@ -263,7 +252,6 @@ namespace ConfigParsingExample.Common
                                 if (bool.TryParse(value, out _testMode))
                                 {
                                     _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                    Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
                                 }
                                 else
                                 {
@@ -273,7 +261,6 @@ namespace ConfigParsingExample.Common
                                             _verbose = true;
 
                                             _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                            Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
 
                                             break;
 
@@ -281,7 +268,6 @@ namespace ConfigParsingExample.Common
                                             _verbose = true;
 
                                             _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                            Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
 
                                             break;
 
@@ -289,7 +275,6 @@ namespace ConfigParsingExample.Common
                                             _verbose = false;
 
                                             _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                            Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
 
                                             break;
 
@@ -297,7 +282,6 @@ namespace ConfigParsingExample.Common
                                             _verbose = false;
 
                                             _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                            Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
 
                                             break;
 
@@ -312,7 +296,6 @@ namespace ConfigParsingExample.Common
                                 if (bool.TryParse(value, out _debugMode))
                                 {
                                     _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                    Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
                                 }
                                 else
                                 {
@@ -322,7 +305,6 @@ namespace ConfigParsingExample.Common
                                             _verbose = true;
 
                                             _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                            Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
 
                                             break;
 
@@ -330,7 +312,6 @@ namespace ConfigParsingExample.Common
                                             _verbose = true;
 
                                             _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                            Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
 
                                             break;
 
@@ -338,7 +319,6 @@ namespace ConfigParsingExample.Common
                                             _verbose = false;
 
                                             _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                            Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
 
                                             break;
 
@@ -346,7 +326,6 @@ namespace ConfigParsingExample.Common
                                             _verbose = false;
 
                                             _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                            Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
 
                                             break;
 
@@ -376,7 +355,6 @@ namespace ConfigParsingExample.Common
                                 if (bool.TryParse(value, out _sendNotifications))
                                 {
                                     _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                    Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
                                 }
                                 else
                                 {
@@ -386,7 +364,6 @@ namespace ConfigParsingExample.Common
                                             _verbose = true;
 
                                             _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                            Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
 
                                             break;
 
@@ -394,7 +371,6 @@ namespace ConfigParsingExample.Common
                                             _verbose = true;
 
                                             _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                            Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
 
                                             break;
 
@@ -402,7 +378,6 @@ namespace ConfigParsingExample.Common
                                             _verbose = false;
 
                                             _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                            Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
 
                                             break;
 
@@ -410,7 +385,6 @@ namespace ConfigParsingExample.Common
                                             _verbose = false;
 
                                             _logger.LogInformation($"Config Parameter({param}) Value Read: {value}");
-                                            Console.WriteLine($"Config Parameter({param}) Value Read: {value}");
 
                                             break;
 
@@ -424,14 +398,10 @@ namespace ConfigParsingExample.Common
                             default:
                                 break;
                         }
-                        break;
-                        
+                        break;           
                 }
             }
-
             _isInitialized = true;
         }
-
-    }
-    
+    }    
 }
